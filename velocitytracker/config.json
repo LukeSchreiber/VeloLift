@@ -1,0 +1,18 @@
+{
+  "output": {
+    "output_dir": "processed",
+    "logs_dir": "logs",
+    "export_csv": false,
+    "generate_charts": false
+  },
+  "hardware": {
+    "arduino_port": null,
+    "baud_rate": 115200,
+    "enabled": true
+  },
+  "state_machine": {
+    "start_velocity_threshold": 0.15,
+    "reset_velocity_threshold": 0.05,
+    "fatigue_drop_percent": 11
+  }
+}

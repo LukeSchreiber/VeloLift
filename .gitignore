@@ -1,0 +1,45 @@
+# Dependencies
+node_modules/
+package-lock.json
+
+# Build output
+dist/
+dist-ssr/
+*.local
+.vite/
+
+# Python
+venv/
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+
+# Runtime data
+velocitytracker/history.json
+velocitytracker/workouts.json
+velocitytracker/*.json
+!velocitytracker/config.json
+velocitytracker/processed/
+velocitytracker/logs/
+
+# Editor & OS
+.DS_Store
+.vscode/*
+!.vscode/extensions.json
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+# Claude workspace
+.claude/

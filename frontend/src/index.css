@@ -1,0 +1,139 @@
+@import "tailwindcss";
+
+@theme {
+  /* Premium Monochrome - Rich Black Foundation */
+  --color-bg-primary: #050505;
+  --color-bg-secondary: #0a0a0a;
+  --color-bg-tertiary: #111111;
+
+  /* Borders - Low Opacity White */
+  --color-border: rgba(255, 255, 255, 0.08);
+  --color-border-hover: rgba(255, 255, 255, 0.15);
+  --color-border-active: #ffffff;
+
+  /* Text - High Contrast Monochrome */
+  --color-text-primary: #ffffff;
+  --color-text-secondary: #a1a1aa;
+  --color-text-muted: #52525b;
+
+  /* Accents - Pure White */
+  --color-accent: #ffffff;
+  --color-accent-dim: rgba(255, 255, 255, 0.08);
+  --color-danger: #dc2626;
+
+  /* Fonts */
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-primary);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  letter-spacing: -0.01em;
+}
+
+#root {
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Typography Utilities */
+.font-mono-nums {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.05em;
+}
+
+/* Glass Panel Effect */
+.glass-panel {
+  background: rgba(5, 5, 5, 0.8);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Velocity Glow Effect */
+.velocity-glow {
+  text-shadow: 0 0 80px rgba(255, 255, 255, 0.12),
+               0 0 40px rgba(255, 255, 255, 0.08);
+}
+
+.velocity-active-glow {
+  text-shadow: 0 0 60px rgba(255, 255, 255, 0.25),
+               0 0 30px rgba(255, 255, 255, 0.15);
+}
+
+/* Interactive Elements */
+.btn-outline {
+  background: transparent;
+  border: 1px solid var(--color-border);
+  color: var(--color-text-secondary);
+  border-radius: 9999px;
+  transition: all 0.2s ease;
+}
+
+.btn-outline:hover {
+  border-color: var(--color-text-primary);
+  color: var(--color-text-primary);
+}
+
+/* Primary Action - White Pill */
+.btn-action {
+  background: var(--color-text-primary);
+  color: var(--color-bg-primary);
+  border: none;
+  font-weight: 500;
+  border-radius: 9999px;
+  transition: all 0.2s ease;
+}
+
+.btn-action:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+/* Terminal Inputs */
+.input-terminal {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid var(--color-border);
+  color: var(--color-text-primary);
+  font-family: var(--font-mono);
+  border-radius: 0;
+  padding: 8px 0;
+}
+
+.input-terminal:focus {
+  outline: none;
+  border-bottom-color: var(--color-text-primary);
+}
+
+.input-terminal::placeholder {
+  color: var(--color-text-muted);
+}
+
+/* Custom Scrollbar - Minimal */
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
